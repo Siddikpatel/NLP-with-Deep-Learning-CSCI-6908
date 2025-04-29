@@ -1,0 +1,34 @@
+Vocabulary size: 3599
+(embeddings) vocab size x embed_dim: (3599, 50) = (3599, 50)
+
+(W) Input features x Output features: (100, 3599) = (100, 3599)
+
+(y = E[I]) Batch size x context_size x embedding_dim : (32, 4, 50) = (32, 4, 50)
+
+(model: embeddings) Batch size x 2xcontext_size x embedding_dim : (32, 4, 50) = (32, 4, 50)
+
+(model: embeddings_reshaped) Batch size x (2 x context_size x embedding_dim) : (32, (4 x 50)) = (32, 200)
+
+(Y = XW) Batch size x Output features: (32, 3599) = (32, 3599)
+
+(model: logits) Batch size x vocab_size : (32, 3599) = (32, 3599)
+
+(Pi) Batch size x Num classes : (32, 3599) = (32, 3599)
+
+(model: probs) Batch size x vocab_size : (32, 3599) = (32, 3599)
+
+Loss type: float64
+
+(model: grad_logits) Batch size x vocab_size : (32, 3599) = (32, 3599)
+
+(dL/dW) Input features x Output features: (200, 3599) = (200, 3599)
+
+(dL/dX) Batch size x Input features: (32, 200) = (32, 200)
+
+(model: grad_embeddings_reshaped) Batch size x (2 x context_size x embedding_dim) : (32, (2 x 50) = (32, 200)
+
+(y = E[I]) Batch size x context_size x embedding_dim : (32, 4, 50) = (32, 4, 50)
+
+(model: embeddings) Batch size x 2xcontext_size x embedding_dim : (32, 4, 50) = (32, 4, 50)
+
+(model: embeddings_reshaped) Batch size x (2 x context_size x embedding_dim) : (32, (4 x 50)) = (32, 200)

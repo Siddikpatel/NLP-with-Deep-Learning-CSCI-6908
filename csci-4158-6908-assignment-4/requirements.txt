@@ -1,0 +1,7 @@
+torch
+subword-nmt
+nltk
+numpy
+scikit-learn
+matplotlib
+tqdm
